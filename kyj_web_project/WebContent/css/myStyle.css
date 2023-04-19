@@ -1,0 +1,6 @@
+
+		/* selector(선택자) {property:value;...} */
+		/* h {background-color:yellow;} 오류이지만 알려주진 않음*/
+		h1 {background-color:yellow;}
+		.h {background-color:blue; color:white;} 
+		#h2 {background-color:tomato; color:yellow;}
