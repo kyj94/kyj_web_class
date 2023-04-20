@@ -11,12 +11,44 @@
 		table, th, td {
 			border:1px solid lightgray;
 			border-collapse:collapse;
-			/* font-size:12px; */
+			font-size:15px;
+			height:30px;
 		}
 		
 		table {
-			width:70%;
+			width:55%;
 			padding:500px;
+		}
+		
+		tr:first-child {
+			background:darkblue;
+			color:white;
+		}
+		
+		tr:last-child  td {
+			border-color:white;
+			border-top:lightgray;
+			background:white;
+			/* text-align:center; */
+		}
+		
+		td {
+			text-align:center;
+		}
+		
+		tr td:nth-child(2) {
+			width:450px;
+			text-align:left;
+			padding-left:30px;
+		}
+		
+		tr:nth-child(even) {
+			background:#ffe5e5;
+		}
+		
+		tr:hover {
+			background:tomato;
+			color:white;
 		}
 	</style>
 </head>
@@ -101,7 +133,9 @@
 			<td>2023-04-20</td>
 		</tr>
 		
-		<tr><td clospan="4"> <<1 2 3 4 5>></td></tr>
+		<tr>
+			<td colspan=4> <<1 2 3 4 5>></td>
+		</tr>
 	</table>
 </body>
 </html>
