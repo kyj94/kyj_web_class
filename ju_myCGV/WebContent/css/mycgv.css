@@ -4,6 +4,7 @@
 * {
 	padding:0px;
 	margin:0px;
+	font-family:"³ª´®°íµñ";
 }
 
 /************************************
@@ -17,7 +18,44 @@ header {
 .header_menu {
 	border:1px solid red;
 	width:1000px; 
+	height:300px;
 	margin:auto;
+	}
+
+.header_menu nav, .header_menu ul  li{
+	/* border:1px solid blue; */
+	list-style-type:none;
+	display:inline-block;
+	float:right;
+	}
+	
+.header_menu > div {
+	clear:both;
+	
+}
+	
+.header_menu > nav.nav1 > ul > li {
+	
+	
+}	
+	
+.header_menu > nav.nav1 > ul > li > a {
+	border:1px solid red;
+	display:block;
+	text-decoration:none;
+	color:gray;	
+	width:100px;
+	font-size:12px;
+	float:left;
+	text-align:center;
+	}
+
+.header_menu nav1 {
+	/* border:1px solid green; */
+}
+
+.header_menu nav2 {
+	/* border:1px solid blue; */
 }
 		
 /************************************
