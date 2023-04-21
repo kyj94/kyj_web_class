@@ -83,15 +83,17 @@ header {
 	}
 
  .header_menu > div > div > nav {
-	border:2px solid green;
+	border:1px solid green;
 	width:234px;
 	height:32px;
 	position:relative;
-	/* left:350px;
-	top:22px; */
+	text-align:center;
 }
 
-
+ .header_menu > div > div > nav > ul > li > a {
+	text-decoration:none;
+	color:gray;
+ }
 		
 /************************************
 	Index-Content style sheet
