@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Display_풀이</title>
+	<style>
+		div {
+		border:1px solid lightgray;
+		width:250px;
+		text-align:center;
+		display:inline-block;
+		margin:0px 5px;
+		}
+		
+		div img {
+		width:90%;
+		}
+		
+		div span {
+			font-family:"나눔손글씨 암스테르담";
+			font-size:35px;
+			display:inline-block;
+			margin:5px 0px;
+			font-weight:bold;
+		}
+		
+		div button {
+			font-family:"나눔손글씨 암스테르담";
+			font-size:20px;
+			width:90%;
+			margin:10px 0px;
+			background:mediumseagreen;
+			color:white;
+			border:none;
+			padding:10px 0px;
+			border-radius:5px;
+			font-weight:bold;
+		}
+		
+		.span_bg {
+			background:#dcdcdc;
+			color:tomato;
+		}
+		
+		button:hover {
+			background:red;
+			color:white;
+			cursor:pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Display</h1>
+	
+	<div id="d1">
+		<span class="span_bg">display : none</span>
+		<img src="16315179619950.jpg">
+		<button type="button" onclick="btn_click('remove')">Remove</button>
+	</div>
+	
+	<div id="d2">
+		<span class="span_bg">visibility : hidden</span>
+		<img src="16315179619950.jpg">
+		<button type="button" onclick="btn_click('hide')">Hide</button>
+	</div>
+	
+	<div id="d3">
+		<span>Reset</span>
+		<img src="16315179619950.jpg">
+		<button type="button" onclick="btn_click('reset')">Reset All</button>
+	</div>
+	
+	<script>
+		function btn_click(btnName) {
+			if(btnName == 'remove') {
+				/* display:none */
+				var d1 = document.getElementById("d1");
+				d1.style.display = "none";
+			} else if(btnName =='hide') {
+				/* display:remove */
+				var d2 = document.getElementById("d2");
+				d2.style.visibility = "hidden";
+				} else if (btnName == 'reset'){
+					var d1 = document.getElementById("d1");
+					var d2 = document.getElementById("d2");
+					d1.style.display = "inline-block";
+					d2.style.visibility = "visible";
+				}
+		}
+	</script>
+	
+
+</body>
+</html>
