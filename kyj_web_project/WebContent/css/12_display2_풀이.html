@@ -41,29 +41,55 @@
 			background:#dcdcdc;
 			color:tomato;
 		}
+		
+		button:hover {
+			background:red;
+			color:white;
+			cursor:pointer;
+		}
 	</style>
 </head>
 
 <body>
 	<h1>Display</h1>
 	
-	<div>
+	<div id="d1">
 		<span class="span_bg">display : none</span>
 		<img src="16315179619950.jpg">
-		<button type="button">Remove</button>
+		<button type="button" onclick="btn_click('remove')">Remove</button>
 	</div>
 	
-	<div>
+	<div id="d2">
 		<span class="span_bg">visibility : hidden</span>
 		<img src="16315179619950.jpg">
-		<button type="button">Hide</button>
+		<button type="button" onclick="btn_click('hide')">Hide</button>
 	</div>
 	
-	<div>
+	<div id="d3">
 		<span>Reset</span>
 		<img src="16315179619950.jpg">
-		<button type="button">Reset All</button>
+		<button type="button" onclick="btn_click('reset')">Reset All</button>
 	</div>
+	
+	<script>
+		function btn_click(btnName) {
+			if(btnName == 'remove') {
+				/* display:none */
+				var d1 = document.getElementById("d1");
+				d1.style.display = "none";
+			} else if(btnName =='hide') {
+				/* display:remove */
+				var d2 = document.getElementById("d2");
+				d2.style.visibility = "hidden";
+				} else if (btnName == 'reset'){
+					var d1 = document.getElementById("d1");
+					var d2 = document.getElementById("d2");
+					d1.style.display = "inline-block";
+					d2.style.visibility = "visible";
+				}
+		}
+	</script>
+	
 
 </body>
 </html>
