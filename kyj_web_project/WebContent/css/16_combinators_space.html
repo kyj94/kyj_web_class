@@ -4,14 +4,26 @@
 	<meta charset="UTF-8">
 	<title>CSS - Combinators</title>
 	<style>
-		body {
+		body div section p { /* 자손 */
 			background:tomato;
 		}
+		
+		body > div > p { /* 자식 */
+			background:mediumseagreen;
+		}
+		
+	 	body div + p { /* + : 이웃한 하나의 태그 선택 > 4, 9 */
+	 		/* background:yellow; */
+	 	}
+	 	
+	 	body div ~ p { /* + : 이웃한 전체 태그 선택 > 4, 5, 9, 10 */
+	 		background:yellow;
+	 	}
 	</style>
 </head>
 
 <body>
-	<h2>Descendant Selector : [selector]+space</h2>
+	<h2>Descendant(자손) Selector : [selector]+space</h2>
 
 	<p>The descendant selector matches all elements that are descendants of a specified element.</p>
 	
@@ -23,6 +35,15 @@
 	
 	<p>Paragraph 4. Not in a div.</p>
 	<p>Paragraph 5. Not in a div.</p>
+	
+	<div>
+	  <p>Paragraph 6 in the div.</p>
+	  <p>Paragraph 7 in the div.</p>
+	  <section><p>Paragraph 8 in the div.</p></section>
+	</div>
+	
+	<p>Paragraph 9. Not in a div.</p>
+	<p>Paragraph 10. Not in a div.</p>
 
 </body>
 </html>
