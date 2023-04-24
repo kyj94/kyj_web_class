@@ -113,5 +113,15 @@ header {
 	footer style sheet
 ************************************/
 .footer_bg {
-	display:5px solid red;
+	border:1px solid red;
+	width:100%;
+	background:#FFDB99;
+}
+
+.footer_bg > img {
+	border:1px solid blue;
+	height:240px;
+	width:980px;
+	display:block;
+	margin:auto;
 }
