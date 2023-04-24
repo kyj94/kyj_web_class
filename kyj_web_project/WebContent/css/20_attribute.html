@@ -9,13 +9,23 @@
 		}
 		
 		img[title~="logo"] {
-			background:yellow;
 			border:5px solid green;
-			margin:10px;
 		}
 		
-		img[class|="cgv"]{
-			opasity:0.5;
+		img[class^="cgv"]{
+			opacity:0.5;
+		}
+		
+		img[class|="cgv"]:hover {
+			opacity:1;
+		}
+		
+		img[class$="test"] {
+			border:3px dotted green;
+		}
+		
+		img[class*='cg'] {
+			outline:5px solid red;
 		}
 	</style>
 </head>
@@ -29,5 +39,6 @@
 	<img src="h1_cgv.png"title="cgv logo" class="cgv-logo">
 	<img src="h1_cgv.png" title="cgv" class="cgv-img">
 	<img src="h1_cgv.png" title="logo" class="cgvlogo">
+	<img src="h1_cgv.png" title="logo" class="cgvtest">
 </body>
 </html>
