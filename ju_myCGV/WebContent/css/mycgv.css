@@ -7,12 +7,59 @@
 	font-family:"나눔고딕";
 }
 
-.header_menu, .section1_d1, .section2, .section3 {
+.header_menu, .section1_d1, .section2, .section3, .footer_menu,
+section.login, section.join, section.mypage, section.notice, 
+section.board, section.admin {
 	/* border:1px solid blue; */
 	width:1000px;
-	text-align:center;
 	margin:auto;
 	}
+	
+section.login form[name='loginForm'], section.join form[name='joinForm'],
+section.mypage > div, section.notice table, section.board table,
+section.admin > div {
+	border:1px solid red;
+	width:70%;
+	margin:auto;
+}
+	
+.title {
+	border-left:10px solid #333;
+	border-bottom:1px solid #333;
+	width:30%;
+	font-size:23pt;
+	padding:5px 0px 10px 20px;
+	margin:30px 0px 30px 100px;
+	font-style:italic;
+}
+
+.btn_style_j { /* 버튼 공통 스타일*/
+	background:#E71A0F;
+	color:white;
+	border-style:none;
+	font-size:16px;
+	margin:2px 5px;
+	padding:3px 5px;
+	border-radius:8px;
+	width:130px;
+}
+
+.btn_style { /* 버튼 공통 스타일_풀이용 */
+	width:130px;
+	padding:7px 0px;
+	background:tomato;
+	color:white;
+	font-size:13px;
+	font-weight:700;
+	border:1px solid white;
+	outline:1px solid red;
+}
+
+.btn_style:hover {
+	cursor:pointer;
+	background:yellow;
+	color:#E71A0F;
+}
 
 /************************************
 		Header style sheet
@@ -23,13 +70,6 @@ header {
 	height:149px;
 }
 		
-.header_menu {
-	/* border:1px solid red; */
-	width:1000px; 
-	height:300px;
-	margin:auto;
-	}
-
 .header_menu nav, .header_menu ul li{
 	/* border:1px solid blue; */
 	list-style-type:none;
@@ -37,8 +77,8 @@ header {
 	}
 	
 .header_menu > div {
-	clear:both;
 	/* border:3px solid blue; */
+	clear:both;
 	position:relative;
 }
 
@@ -92,18 +132,21 @@ header {
 	}
 
  .header_menu > div > div > nav.nav2 {
-	/* border:1px solid red; */
-	width:600px;
+	/* border:1px solid red; */ 
+	width:300px;
 	height:32px;
-	margin:opx 30px;
-	padding-right:100px;
+	text-align:center;
+	margin-left:-35px;
+	padding-top:10px;
 }
 
  .header_menu > div > div > nav > ul > li > a {
-	/* border:1px solid green; */
+	/* border:4px solid green; */
 	text-decoration:none;
-	color:gray;
-	padding:0px 5px;
+	color:#555;
+	/* margin-left:-10px; */
+	padding:0px 10px;
+	font-weight:bold;
  }
 		
 /************************************
@@ -185,67 +228,107 @@ header {
 /************************************
 	footer style sheet
 ************************************/
+/* footer {
+	border:1px solid green;
+	height:500px;	
+} */
+
 .footer_bg {
-	/* border:1px solid red; */
-	width:100%;
-	height:200px;
+	/* border:1px solid green; */
+	text-align:center;
 	background:#FFDB99;
-	text-align: center
+	margin-top:30px;
 }
 
 .footer_bg > img {
-	border:1px solid blue;
-	display:inline-block;
-	position:relative;
-	bottom:50px;
+	/* border:1px solid red; */
+	margin-top:-58px;
 }
 
-.footer_menu {
-	/* border:10px solid blue; */
-	text-align:center;
+.footer_menu ul {
+	/* border:1px solid red; */
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	border-bottom:1px solid lightgray;
 }
 
-.footer_menu > nav {
-	/* border:14px solid green; */
-	text-align:center;
-	padding-bottom:30px;
-	height:50px;
-	border-bottom:2px solid #555;
+.footer_menu ul > li {
+	/* border:1px solid red; */
+	float:left;
 }
 
-.footer_menu > nav > ul > li {
+.footer_menu ul > li:last-child {
+	/* border:1px solid red; */
+	float:right;
+}
+
+.footer_menu ul > li > a {
+	/* border:1px solid red; */
+	display:block;
+	text-decoration:none;
+	padding:30px 32px 30px 2px;
+	color:#777;
+	font-size:12px;
+	font-weight:700;
+}
+
+.footer_menu ul > li:last-child > a {
+	padding: 30px 0px 30px 2px;
+}
+
+.footer_menu ul > li:nth-child(6) > a {
+	color:black;
+	text-decoration:underline;
+} 
+
+.footer_menu ul > li > a:hover {
+	text-decoration:underline;
+}
+
+.footer_menu > div  {
+	/* border:1px solid red; */
+	margin-top:50px 0px;
+	padding-top:20px;
+}
+
+.footer_menu > div > p {
+	font-size:12px;
+	color:#777;
+	padding:3px 0px;
+}
+
+
+/************************************
+		Login Form style sheet
+************************************/
+section.login ul {
 	/* border:1px solid green; */
 	list-style-type:none;
+}
+
+section.login ul li {
+	/* border:1px solid green; */	
+	padding:3px 0px;
+}
+
+section.login ul li label {
+	/* border:1px solid green; */
 	display:inline-block;
-	
-	padding:10px 0px;	
+	width:70px;
 }
 
-.footer_menu > nav, .footer_menu > nav > ul > li > a{
-	/* border:1px solid red; */
+section.login ul li a {
+	/* border:1px solid green; */
 	text-decoration:none;
-	color:gray;
+	color:#E71A0F;
 	padding:0px 10px;
-	font:8px;
 }
 
-.footer_menu > div:last-child {
-	/* border:3px solid red; */
-	padding-left:10px;
-	color:#777;
-	width:1000px;
-	margin:auto;
+section.login ul li a:hover {
+	color:green;
 }
-
-.footer_menu  div p {
-	text-align:left;
-	margin-bottom:2px;
-}
-	
-
-
-
-
 
 
 
