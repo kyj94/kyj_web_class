@@ -303,32 +303,113 @@ header {
 /************************************
 		Login Form style sheet
 ************************************/
-section.login ul {
-	/* border:1px solid green; */
+section.login form ul {
+	/* border:5px solid green; */
 	list-style-type:none;
+	margin:0px;
+	padding:0px;
 }
 
 section.login ul li {
-	/* border:1px solid green; */	
-	padding:3px 0px;
+	clear:left;
 }
 
-section.login ul li label {
-	/* border:1px solid green; */
+section.login ul li > label {
 	display:inline-block;
-	width:70px;
+	width:160px;
+	padding:10px 0px;
+	background:#ddd;
+	color:black;
+	border-radius:4px;
+	font-size:12px;
+	font-weight:700;
+	float:left;
+	text-align:center;
 }
 
-section.login ul li a {
-	/* border:1px solid green; */
-	text-decoration:none;
-	color:#E71A0F;
-	padding:0px 10px;
+section.login ul li > input {
+	width:50%;
+	padding:8px 9px;
+	border-radius:4px;
+	border:1px solid #ddd;
+	margin:0px 0px 10px 10px;
+	font-size:12px;
 }
 
-section.login ul li a:hover {
-	color:green;
+section.login form ul li:nth-child(3) {
+	padding:15px 0px 0px 175px;
+}
+ 
+section.login form ul li:nth-child(3) > button:first-child {
+	margin-right:10px;
 }
 
+section.login form ul li:last-child a {
+	/* text-decoration:none; */
+	font-size:12px;
+	font-weight:700;
+	color:#555;
+}
+
+section.login form ul li:last-child {
+	padding:20px 135px 30px 0px;
+	text-align:right;
+}
+
+section.login form ul li:last-child a:first-child {
+	margin-right:20px;
+} 
+
+section.login ul li:last-child a:hover {
+	color:tomato;
+}
+
+
+/************************************
+		Join Form style sheet
+************************************/
+section.join form ul {
+	font-size:12pt;
+	list-style-type:none;
+}
+
+section.join form ul li {
+	clear:left;
+}
+
+section.join form ul li > label {
+	display:inline-block;
+	width:150px;
+	padding:10px 0px;
+	background:#ddd;
+	color:black;
+	border-radius:4px;
+	font-size:12px;
+	font-weight:700;
+	float:left;
+	text-align:center;
+	margin:0px 7px 5px 0px;
+}
+
+.input1 {
+	width:40%;
+	padding:8px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+}
+
+/* .email { 
+	width:15%;
+	padding:8px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+} */ /* 아래와 동일*/
+
+input[name='email1'], input[name='email2'] {
+	width:15%;
+	padding:8px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+}
 
 
