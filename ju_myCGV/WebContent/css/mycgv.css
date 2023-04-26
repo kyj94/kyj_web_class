@@ -2,76 +2,76 @@
 		Commons style sheet
 ************************************/
 * {
-	padding:0px;
-	margin:0px;
-	font-family:"나눔고딕";
+	padding: 0px;
+	margin: 0px;
+	font-family: "나눔고딕";
 }
 
-.header_menu, .section1_d1, .section2, .section3, .footer_menu,
-section.login, section.join, section.mypage, section.notice, 
-section.board, section.admin {
+.header_menu, .section1_d1, .section2, .section3, .footer_menu, section.login,
+	section.join, section.mypage, section.notice, section.board, section.admin
+	{
 	/* border:1px solid blue; */
-	width:1000px;
-	margin:auto;
-	}
-	
-section.login form[name='loginForm'], section.join form[name='joinForm'],
-section.mypage > div, section.notice table, section.board table,
-section.admin > div {
-	border:1px solid red;
-	width:70%;
-	margin:auto;
+	width: 1000px;
+	margin: auto;
 }
-	
+
+section.login form[name='loginForm'], section.join form[name='joinForm'],
+	section.mypage>div, section.notice table, section.board table, section.admin>div
+	{
+	border: 1px solid red;
+	width: 70%;
+	margin: auto;
+}
+
 .title {
-	border-left:10px solid #333;
-	border-bottom:1px solid #333;
-	width:30%;
-	font-size:23pt;
-	padding:5px 0px 10px 20px;
-	margin:30px 0px 30px 100px;
-	font-style:italic;
+	border-left: 10px solid #333;
+	border-bottom: 1px solid #333;
+	width: 30%;
+	font-size: 23pt;
+	padding: 5px 0px 10px 20px;
+	margin: 30px 0px 30px 100px;
+	font-style: italic;
 }
 
 .btn_style_j { /* 버튼 공통 스타일*/
-	background:#E71A0F;
-	color:white;
-	border-style:none;
-	font-size:16px;
-	margin:2px 5px;
-	padding:3px 5px;
-	border-radius:8px;
-	width:130px;
+	background: #E71A0F;
+	color: white;
+	border-style: none;
+	font-size: 16px;
+	margin: 2px 5px;
+	padding: 3px 5px;
+	border-radius: 8px;
+	width: 130px;
 }
 
 .btn_style { /* 버튼 공통 스타일_풀이용 */
-	width:130px;
-	padding:7px 0px;
-	background:#e71a0f;
-	color:white;
-	font-size:13px;
-	font-weight:700;
-	border:1px solid white;
-	outline:1px solid #e71a0f;
+	width: 130px;
+	padding: 7px 0px;
+	background: #e71a0f;
+	color: white;
+	font-size: 13px;
+	font-weight: 700;
+	border: 1px solid white;
+	outline: 1px solid #e71a0f;
 }
 
 .btn_style:hover {
-	cursor:pointer;
-	background:#fef8dc;
-	color:#E71A0F;
+	cursor: pointer;
+	background: #fef8dc;
+	color: #E71A0F;
 }
 
 .btn_style2 { /* 회원가입 - 중복체크, 주소찾기 버튼 스타일 */
-	width:70px;
-	padding:7px 0px;
-	background:#999;
-	color:white;
-	font-size:9px;
-	font-weight:700;
-	border:1px solid white;
-	border-radius:4px;
-	margin:0px 0px 8px 1px;
-	cursor:pointer;
+	width: 70px;
+	padding: 7px 0px;
+	background: #999;
+	color: white;
+	font-size: 9px;
+	font-weight: 700;
+	border: 1px solid white;
+	border-radius: 4px;
+	margin: 0px 0px 8px 1px;
+	cursor: pointer;
 }
 
 /************************************
@@ -79,165 +79,168 @@ section.admin > div {
 ************************************/
 header {
 	/* border:1px solid red; */
-	background-image:url("http://localhost:9000/ju_myCGV/images/bg_header.gif");
-	height:149px;
+	background-image:
+		url("http://localhost:9000/ju_myCGV/images/bg_header.gif");
+	height: 149px;
 }
-		
-.header_menu nav, .header_menu ul li{
+
+.header_menu nav, .header_menu ul li {
 	/* border:1px solid blue; */
-	list-style-type:none;
-	display:inline-block;
-	}
-	
-.header_menu > div {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.header_menu>div {
 	/* border:3px solid blue; */
-	clear:both;
-	position:relative;
+	clear: both;
+	position: relative;
 }
 
-.header_menu > div > a {
+.header_menu>div>a {
 	/* border:2px solid red; */
-	width:136px;
-	height:59px;
-	position:absolute;
-	left:10px;
-	top:11px;
+	width: 136px;
+	height: 59px;
+	position: absolute;
+	left: 10px;
+	top: 11px;
 }
 
-.header_menu > div > div {
+.header_menu>div>div {
 	/* border:2px solid green; */
-	width:234px;
-	height:32px;
-	position:absolute;
-	left:350px;
-	top:11px;
+	width: 234px;
+	height: 32px;
+	position: absolute;
+	left: 350px;
+	top: 11px;
 }
 
-.header_menu > nav.nav1 > ul {
-	width:100%;
-	height:30px;
+.header_menu>nav.nav1>ul {
+	width: 100%;
+	height: 30px;
 	/* border:1px solid blue; */
 	/* margin-left:150px; */
-	padding-left:420px;
-	padding-top:10px;
+	padding-left: 420px;
+	padding-top: 10px;
 }
-	
-.header_menu > nav.nav1 > ul > li {
-	float:left;
-	list-style-type:none;
-}	
-	
-.header_menu > nav.nav1 > ul > li > a {
+
+.header_menu>nav.nav1>ul>li {
+	float: left;
+	list-style-type: none;
+}
+
+.header_menu>nav.nav1>ul>li>a {
 	/* border:1px solid red; */
-	width:70px;
-	display:block;
-	text-decoration:none;
-	color:gray;	
-	font-size:12px;
-	text-align:center;
-	border-right:2px solid gray;
-	
-	}
-	
-.header_menu > nav.nav1 > ul > li:last-child > a {
-	border-right:none;
-	color:tomato;
-	}
-
- .header_menu > div > div > nav.nav2 {
-	/* border:1px solid red; */ 
-	width:300px;
-	height:32px;
-	text-align:center;
-	margin-left:-35px;
-	padding-top:10px;
+	width: 70px;
+	display: block;
+	text-decoration: none;
+	color: gray;
+	font-size: 12px;
+	text-align: center;
+	border-right: 2px solid gray;
 }
 
- .header_menu > div > div > nav > ul > li > a {
+.header_menu>nav.nav1>ul>li:last-child>a {
+	border-right: none;
+	color: tomato;
+}
+
+.header_menu>div>div>nav.nav2 {
+	/* border:1px solid red; */
+	width: 300px;
+	height: 32px;
+	text-align: center;
+	margin-left: -35px;
+	padding-top: 10px;
+}
+
+.header_menu>div>div>nav>ul>li>a {
 	/* border:4px solid green; */
-	text-decoration:none;
-	color:#555;
+	text-decoration: none;
+	color: #555;
 	/* margin-left:-10px; */
-	padding:0px 10px;
-	font-weight:bold;
- }
-		
+	padding: 0px 10px;
+	font-weight: bold;
+}
+
 /************************************
 	Index-Content style sheet
 ************************************/
 .section1 {
-	background-image:url("http://localhost:9000/ju_myCGV/images/carousel_bg.png");
-	height:450px;
+	background-image:
+		url("http://localhost:9000/ju_myCGV/images/carousel_bg.png");
+	height: 450px;
 }
-		
+
 .section1_d1, .section2, .section3 {
 	/* border:1px solid blue; */
-	width:1000px;
-	text-align:center;
-	}
-	
+	width: 1000px;
+	text-align: center;
+}
+
 .section2 div:first-child, .section3 div:first-child {
 	/* border:1px solid red; */
-	padding:20px 0px;
-}	
+	padding: 20px 0px;
+}
 
 .section2 div:nth-child(2) {
 	/* border:1px solid green; */
-	/* display:inline-block; */	
-	float:left;
+	/* display:inline-block; */
+	float: left;
 }
 
-.section2 > img {
+.section2>img {
 	/* border:1px solid green; */
-	height:400px;
-	float:right;
-	
+	height: 400px;
+	float: right;
 }
 
 .section3 {
 	/* border:1px solid green; */
-	clear:both;
+	clear: both;
 }
 
 .section3 div:nth-child(2) {
 	/* border:1px solid green; */
-	/* display:inline-block; */	
-	padding-bottom:20px;
+	/* display:inline-block; */
+	padding-bottom: 20px;
 	border-bottom: 5px solid #555;
-}	
+}
 
 .section3 div:nth-child(3) {
 	/* border:1px solid green; */
-	/* display:inline-block; */	
-	padding:20px 0px;
-}	
+	/* display:inline-block; */
+	padding: 20px 0px;
+}
 
-.section3 div:nth-child(3) > img:first-child,.section3 div:nth-child(3) > img:last-child {
-	border:7.5px double black;
+.section3 div:nth-child(3)>img:first-child, .section3 div:nth-child(3)>img:last-child
+	{
+	border: 7.5px double black;
 	/* outline:3px double black; */
-}		
+}
 
-.section3 > div:nth-child(2) > img:first-child, .section3 > div:last-child  > img:first-child {
+.section3>div:nth-child(2)>img:first-child, .section3>div:last-child>img:first-child
+	{
 	/* border:1px solid green; */
-	float:left;
+	float: left;
 }
 
-.section3 > div:nth-child(2) > img:last-child, .section3 > div:last-child  > img:last-child {
+.section3>div:nth-child(2)>img:last-child, .section3>div:last-child>img:last-child
+	{
 	/* border:2px solid green; */
-	float:right;
+	float: right;
 }
 
-.section3 > div:nth-child(2) > img:nth-child(2), .section3 > div:nth-child(2) > img:nth-child(3) {
+.section3>div:nth-child(2)>img:nth-child(2), .section3>div:nth-child(2)>img:nth-child(3)
+	{
 	/* border:2px solid red; */
-	margin:0px 3px;
+	margin: 0px 3px;
 }
 
-.section3 > div:nth-child(3) > img:nth-child(2) {
+.section3>div:nth-child(3)>img:nth-child(2) {
 	/* border:2px solid green; */
+	
 }
-	
 
-	
 /************************************
 	footer style sheet
 ************************************/
@@ -245,170 +248,167 @@ header {
 	border:1px solid green;
 	height:500px;	
 } */
-
 .footer_bg {
 	/* border:1px solid green; */
-	text-align:center;
-	background:#FFDB99;
-	margin-top:30px;
+	text-align: center;
+	background: #FFDB99;
+	margin-top: 30px;
 }
 
-.footer_bg > img {
+.footer_bg>img {
 	/* border:1px solid red; */
-	margin-top:-58px;
+	margin-top: -58px;
 }
 
 .footer_menu ul {
 	/* border:1px solid red; */
-	list-style-type:none;
-	margin:0px;
-	padding:0px;
-	overflow:hidden;
-	border-bottom:1px solid lightgray;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	border-bottom: 1px solid lightgray;
 }
 
-.footer_menu ul > li {
+.footer_menu ul>li {
 	/* border:1px solid red; */
-	float:left;
+	float: left;
 }
 
-.footer_menu ul > li:last-child {
+.footer_menu ul>li:last-child {
 	/* border:1px solid red; */
-	float:right;
+	float: right;
 }
 
-.footer_menu ul > li > a {
+.footer_menu ul>li>a {
 	/* border:1px solid red; */
-	display:block;
-	text-decoration:none;
-	padding:30px 32px 30px 2px;
-	color:#777;
-	font-size:12px;
-	font-weight:700;
+	display: block;
+	text-decoration: none;
+	padding: 30px 32px 30px 2px;
+	color: #777;
+	font-size: 12px;
+	font-weight: 700;
 }
 
-.footer_menu ul > li:last-child > a {
+.footer_menu ul>li:last-child>a {
 	padding: 30px 0px 30px 2px;
 }
 
-.footer_menu ul > li:nth-child(6) > a {
-	color:black;
-	text-decoration:underline;
-} 
-
-.footer_menu ul > li > a:hover {
-	text-decoration:underline;
+.footer_menu ul>li:nth-child(6)>a {
+	color: black;
+	text-decoration: underline;
 }
 
-.footer_menu > div  {
+.footer_menu ul>li>a:hover {
+	text-decoration: underline;
+}
+
+.footer_menu>div {
 	/* border:1px solid red; */
-	margin-top:50px 0px;
-	padding-top:20px;
+	margin-top: 50px 0px;
+	padding-top: 20px;
 }
 
-.footer_menu > div > p {
-	font-size:12px;
-	color:#777;
-	padding:3px 0px;
+.footer_menu>div>p {
+	font-size: 12px;
+	color: #777;
+	padding: 3px 0px;
 }
-
 
 /************************************
 		Login Form style sheet
 ************************************/
 section.login form ul {
 	/* border:5px solid green; */
-	list-style-type:none;
-	margin:0px;
-	padding:0px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
 }
 
 section.login ul li {
-	clear:left;
+	clear: left;
 }
 
-section.login ul li > label {
-	display:inline-block;
-	width:160px;
-	padding:10px 0px;
-	background:#ddd;
-	color:black;
-	border-radius:4px;
-	font-size:12px;
-	font-weight:700;
-	float:left;
-	text-align:center;
+section.login ul li>label {
+	display: inline-block;
+	width: 160px;
+	padding: 10px 0px;
+	background: #ddd;
+	color: black;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 700;
+	float: left;
+	text-align: center;
 }
 
-section.login ul li > input {
-	width:50%;
-	padding:8px 9px;
-	border-radius:4px;
-	border:1px solid #ddd;
-	margin:0px 0px 10px 10px;
-	font-size:12px;
+section.login ul li>input {
+	width: 50%;
+	padding: 8px 9px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	margin: 0px 0px 10px 10px;
+	font-size: 12px;
 }
 
 section.login form ul li:nth-child(3) {
-	padding:15px 0px 0px 175px;
+	padding: 15px 0px 0px 175px;
 }
- 
-section.login form ul li:nth-child(3) > button:first-child {
-	margin-right:10px;
+
+section.login form ul li:nth-child(3)>button:first-child {
+	margin-right: 10px;
 }
 
 section.login form ul li:last-child a {
 	/* text-decoration:none; */
-	font-size:12px;
-	font-weight:700;
-	color:#555;
+	font-size: 12px;
+	font-weight: 700;
+	color: #555;
 }
 
 section.login form ul li:last-child {
-	padding:20px 135px 30px 0px;
-	text-align:right;
+	padding: 20px 135px 30px 0px;
+	text-align: right;
 }
 
 section.login form ul li:last-child a:first-child {
-	margin-right:20px;
-} 
-
-section.login ul li:last-child a:hover {
-	color:tomato;
+	margin-right: 20px;
 }
 
+section.login ul li:last-child a:hover {
+	color: tomato;
+}
 
 /************************************
 		Join Form style sheet
 ************************************/
 section.join form ul {
-	font-size:12pt;
-	list-style-type:none;
+	font-size: 12pt;
+	list-style-type: none;
 }
 
 section.join form ul li {
-	clear:left;
+	clear: left;
 }
 
-section.join form ul li > label {
-	display:inline-block;
-	width:150px;
-	padding:10px 0px;
-	background:#ddd;
-	color:black;
-	border-radius:4px;
-	font-size:12px;
-	font-weight:700;
-	float:left;
-	text-align:center;
-	margin:0px 7px 5px 0px;
+section.join form ul li>label {
+	display: inline-block;
+	width: 150px;
+	padding: 10px 0px;
+	background: #ddd;
+	color: black;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 700;
+	float: left;
+	text-align: center;
+	margin: 0px 7px 5px 0px;
 }
 
 .input1 {
-	width:40%;
-	padding:8px 20px;
-	border:1px solid #ddd;
-	border-radius:4px;
+	width: 40%;
+	padding: 8px 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
 }
 
 /* .email { 
@@ -417,185 +417,263 @@ section.join form ul li > label {
 	border:1px solid #ddd;
 	border-radius:4px;
 } */ /* 아래와 동일*/
-
 input[name='email1'], input[name='email2'] {
-	width:15%;
-	padding:8px 20px;
-	border:1px solid #ddd;
-	border-radius:4px;
+	width: 15%;
+	padding: 8px 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
 }
 
-input[name='email2'] + select, select[name='phone1'] {
-	padding:8px 4px;
-	font-size:9pt;
-	border:1px solid lightgray;
-	border-radius:4px;
-	margin-left:4px;
-		
+input[name='email2']+select, select[name='phone1'] {
+	padding: 8px 4px;
+	font-size: 9pt;
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	margin-left: 4px;
 }
 
 input[name='phone2'], input[name='phone3'] {
-	border:1px solid #ddd;
-	border-radius:4px;
-	width:100px;
-	padding:8px 4px;
-	text-align:center;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 100px;
+	padding: 8px 4px;
+	text-align: center;
 }
 
 textarea[name='intro'] {
-	border:1px solid #ddd;
-	width:60%;
-	height:100px;
-	border-radius:4px;
-	font-size:10pt;
-	padding:8px 15px;
+	border: 1px solid #ddd;
+	width: 60%;
+	height: 100px;
+	border-radius: 4px;
+	font-size: 10pt;
+	padding: 8px 15px;
 }
 
-input[type='radio'], input[type='radio'] +span,
-input[type='checkbox'], input[type='checkbox'] +span {
+input[type='radio'], input[type='radio']+span, input[type='checkbox'],
+	input[type='checkbox']+span {
 	/* border:1px solid red; */
-	font-size:9pt;
-	margin-left:5px;
-	padding:8px 4px;
-	vertical-align:middle;
+	font-size: 9pt;
+	margin-left: 5px;
+	padding: 8px 4px;
+	vertical-align: middle;
 }
 
 form[name='joinForm'] ul li:last-child {
 	/* border:1px solid red; */
-	text-align:center;
-	padding:10px 0px;
+	text-align: center;
+	padding: 10px 0px;
 }
 
 form[name='joinForm'] ul li:last-child button:first-child {
-	margin-right:10px;
+	margin-right: 10px;
 }
-
 
 /************************************
 		Mypage style sheet
 ************************************/
 section.mypage div {
-	height:500px;
-	text-align:center;
-	padding-top:30xp;
+	height: 500px;
+	text-align: center;
+	padding-top: 30xp;
 }
 
-section.mypage div > article {
-	border:1px solid #ddd;
-	border-radius:4px;
-	width:200px;
-	padding:30px 0px;
-	text-align:center;
-	font-size:10pt;
-	font-weight:700;
-	background:tomato;
-	color:white;
-	display:inline-block;
-	cursor:pointer;
+section.mypage div>article {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 200px;
+	padding: 30px 0px;
+	text-align: center;
+	font-size: 10pt;
+	font-weight: 700;
+	background: tomato;
+	color: white;
+	display: inline-block;
+	cursor: pointer;
 }
 
-section.mypage div > article:first-child {
-	background:mediumseagreen;
-	margin-right:10px;
+section.mypage div>article:first-child {
+	background: mediumseagreen;
+	margin-right: 10px;
 }
 
 /************************************
   Notice, Board commons style sheet
 ************************************/
-section.notice table, section.notice th, section.notice td,
-section.board table, section.board th, section.board td {
-	border:1px solid #777;
-	border-collapse:collapse;
-	text-align:center;
-	font-size:10pt;
+section.notice table, section.notice th, section.notice td, section.board table,
+	section.board th, section.board td {
+	border: 1px solid #777;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 10pt;
 }
 
-section.notice th, section.notice td,
-section.board th, section.board td {
-	padding:5px 0px;
+section.notice th, section.notice td, section.board th, section.board td
+	{
+	padding: 5px 0px;
 }
 
-section.notice tr td:nth-child(2), 
-section.board tr td:nth-child(2) {
-	text-align:left;
-	text-indent:15px;
+section.notice tr td:nth-child(2), section.board tr td:nth-child(2) {
+	text-align: left;
+	text-indent: 15px;
 }
 
-section.notice tr td:nth-child(2) > a, 
-section.board tr td:nth-child(2) > a {
-	text-decoration:none;
-	color:#777;
+section.notice tr td:nth-child(2)>a, section.board tr td:nth-child(2)>a
+	{
+	text-decoration: none;
+	color: #777;
 }
 
-section.notice tr td:nth-child(2) > a:hover, 
-section.board tr td:nth-child(2) > a:hover {
-	text-decoration:underline;
+section.notice tr td:nth-child(2)>a:hover, section.board tr td:nth-child(2)>a:hover
+	{
+	text-decoration: underline;
 }
 
-section.notice tr:first-child, 
-section.board tr:nth-child(2) {
-	background:#e71a0f;
-	color:white;
+section.notice tr:first-child, section.board tr:nth-child(2) {
+	background: #e71a0f;
+	color: white;
 }
 
-section.notice tr:last-child td, 
-section.board tr:last-child td {
-	border:1px solid white;
-	padding-bottom:40px;
+section.notice tr:last-child td, section.board tr:last-child td {
+	border: 1px solid white;
+	padding-bottom: 40px;
 }
-
 
 /************************************
   		Notice style sheet
 ************************************/
 section.notice table.notice_content th {
-	background:#e71a0f;
-	color:white;
-	width:120px;
-	paddig:10px 0px;
+	background: #e71a0f;
+	color: white;
+	width: 120px;
+	paddig: 10px 0px;
 }
 
 section.notice table.notice_content tr:first-child td {
-	background:white;
-	color:black;
+	background: white;
+	color: black;
 }
 
-section.notice table.notice_content tr:nth-child(2) td {
-	padding-left:13px;
-	text-indent:0px;
+section.notice table.notice_content tr:nth-child(2) td,
+section.board table.board_content tr:nth-child(2) td {
+	padding-left: 13px;
+	text-indent: 0px;
 }
 
 section.notice table.notice_content tr:last-child td {
-	padding-top:20px;	
+	padding-top: 20px;
 }
 
-section.notice table.notice_content tr:last-child td button:first-child {
-	margin-right:15px;
+section.notice table.notice_content tr:last-child td button:first-child
+	{
+	margin-right: 15px;
 }
-
 
 /************************************
   		board style sheet
 ************************************/
 section.board table.board_list tr:first-child td {
-	border:1px solid white;
-	border-bottom:1px solid #777;
-	text-align:right;
+	border: 1px solid white;
+	border-bottom: 1px solid #777;
+	text-align: right;
 }
 
 section.board table.board_list tr:first-child td button {
-	margin:0px 10px 5px 0px;
-	width:60px;
-	padding:6px 0px;
+	margin: 0px 10px 5px 0px;
+	width: 60px;
+	padding: 6px 0px;
 }
 
-section.board form[name='writeForm'] table button {
+section.board form[name='writeForm'] table button, 
+section.board table.board_contenct buttton,
+section.board form[name='updateForm'] table button,
+section.board form[name='deleteForm'] table button {
 	/* border:1px solid green; */
-	width:80px;
-	margin:20px 5px 0px 0px;
+	width: 80px;
+	margin: 20px 5px 0px 0px;
+}
+
+section.board form[name='writeForm'] table th, 
+section.board table.board_content th,
+section.board form[name='updateForm'] table th {
+	background: #e71a0f;
+	color: white;
+	width: 140px;
+	paddig: 10px 0px;
+}
+
+section.board form[name='writeForm'] table td,
+section.board table.board_content tr:nth-child(2) td,
+section.board form[name='updateForm'] table td { 
+	background:white;
+	color: black;
+}
+
+section.board form[name='writeForm'] table input,
+section.board form[name='writeForm'] table textarea,
+section.board form[name='updateForm'] table input,
+section.board form[name='updateForm'] table textarea {
+	width: 80%;
+	padding: 5px 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+section.board form[name='writeForm'] table,
+section.board form[name='updateForm'] table {
+	width: 65%;
+}
+
+section.board form[name='writeForm'] table textarea,
+section.board form[name='updateForm'] table textarea {
+	height: 140px;
+}
+
+section.board form[name='deleteForm'] img {
+	width:30%;
+}
+
+section.board form[name='deleteForm'] table td {
+	border:1px solid white;
+	background:white;
+	color:black;
+	font-size:13pt;
+	font-weight:700;
 }
 
 
+/************************************
+		Admin style sheet
+************************************/
+section.admin div {
+	height: 300px;
+	text-align: center;
+	padding-top: 30xp;
+}
+
+section.admin div article {
+
+	
+	
+	
+	
+	
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 200px;
+	padding: 30px 0px;
+	text-align: center;
+	font-size: 10pt;
+	font-weight: 700;
+	background: tomato;
+	color: white;
+	display: inline-block;
+	cursor: pointer;
+}
+
+section.mypage div>article:first-child {
+	background: mediumseagreen;
+	margin-right: 10px;
+}
 
 
 

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>MYCGV</title>
+	<meta charset="UTF-8">
+	<title>ju_myCGV</title>
+	<link rel="stylesheet" href="http://localhost:9000/ju_myCGV/css/mycgv.css">
 </head>
+
 <body>
 	<!-- header -->
-	<iframe src="http://localhost:9000/mycgv/header.html"
-			scrolling="no" width="100%" height="300px" frameborder=0></iframe>	
+	<iframe src="http://localhost:9000/ju_myCGV/header.html"
+			scrolling="no" width="100%" height="149px" frameborder=0></iframe>	
 	
 	<!-- content -->
 	<div class="content">
-		<section class="notice">
-			<h1>관리자 - 공지사항</h1>
-			<table border="1">
+		<section class="board">
+			<h1 class="title">관리자 - 공지사항</h1>
+			<table class="board_content">
 				<tr>
 					<th>제목</th>
 					<td>CGV 공지사항 입니다.</td>
@@ -41,7 +43,7 @@
 							<button type="button">삭제하기</button></a>
 						<a href="admin_notice_list.html">
 							<button type="button">리스트</button></a>
-						<a href="http://localhost:9000/mycgv/admin/admin_index.html">
+						<a href="http://localhost:9000/ju_myCGV/admin/admin_index.html">
 						<button type="button">관리자홈</button></a>
 					</td>
 				</tr>
@@ -50,7 +52,7 @@
 	</div>
 	
 	<!-- footer -->
-	<iframe src="http://localhost:9000/mycgv/footer.html"
+	<iframe src="http://localhost:9000/ju_myCGV/footer.html"
 			scrolling="no" width="100%" height="500px" frameborder=0></iframe>	
 </body>
 </html>
