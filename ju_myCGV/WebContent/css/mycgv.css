@@ -57,7 +57,7 @@ section.admin > div {
 
 .btn_style:hover {
 	cursor:pointer;
-	background:yellow;
+	background:#fef8dc;
 	color:#E71A0F;
 }
 
@@ -500,15 +500,100 @@ section.mypage div > article:first-child {
 }
 
 /************************************
-		Notice_List style sheet
+  Notice, Board commons style sheet
 ************************************/
+section.notice table, section.notice th, section.notice td,
+section.board table, section.board th, section.board td {
+	border:1px solid #777;
+	border-collapse:collapse;
+	text-align:center;
+	font-size:10pt;
+}
+
+section.notice th, section.notice td,
+section.board th, section.board td {
+	padding:5px 0px;
+}
+
+section.notice tr td:nth-child(2), 
+section.board tr td:nth-child(2) {
+	text-align:left;
+	text-indent:15px;
+}
+
+section.notice tr td:nth-child(2) > a, 
+section.board tr td:nth-child(2) > a {
+	text-decoration:none;
+	color:#777;
+}
+
+section.notice tr td:nth-child(2) > a:hover, 
+section.board tr td:nth-child(2) > a:hover {
+	text-decoration:underline;
+}
+
+section.notice tr:first-child, 
+section.board tr:nth-child(2) {
+	background:#e71a0f;
+	color:white;
+}
+
+section.notice tr:last-child td, 
+section.board tr:last-child td {
+	border:1px solid white;
+	padding-bottom:40px;
+}
 
 
+/************************************
+  		Notice style sheet
+************************************/
+section.notice table.notice_content th {
+	background:#e71a0f;
+	color:white;
+	width:120px;
+	paddig:10px 0px;
+}
+
+section.notice table.notice_content tr:first-child td {
+	background:white;
+	color:black;
+}
+
+section.notice table.notice_content tr:nth-child(2) td {
+	padding-left:13px;
+	text-indent:0px;
+}
+
+section.notice table.notice_content tr:last-child td {
+	padding-top:20px;	
+}
+
+section.notice table.notice_content tr:last-child td button:first-child {
+	margin-right:15px;
+}
 
 
+/************************************
+  		board style sheet
+************************************/
+section.board table.board_list tr:first-child td {
+	border:1px solid white;
+	border-bottom:1px solid #777;
+	text-align:right;
+}
 
+section.board table.board_list tr:first-child td button {
+	margin:0px 10px 5px 0px;
+	width:60px;
+	padding:6px 0px;
+}
 
-
+section.board form[name='writeForm'] table button {
+	/* border:1px solid green; */
+	width:80px;
+	margin:20px 5px 0px 0px;
+}
 
 
 
