@@ -15,5 +15,8 @@
 
 <body>
 	<h1>Function test</h1>
+	<script>
+		test();
+	</script>
 </body>
 </html>
