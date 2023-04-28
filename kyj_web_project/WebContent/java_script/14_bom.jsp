@@ -12,9 +12,66 @@
 	document.write("height -> " + h +'<br>');
 	document.write("width -> " + w +'<br>');
 </script>
+
+<style>
+	button {
+		width:120px;
+		padding:10px 0;
+		background:cyan;
+		border:1px solid lightgray;
+		border-radius:4px;
+		cursor:pointer;
+	}
+	
+	button:hover {
+		text-decoration:underline;
+	}
+</style>
+
+<script>
+	/* function locationPage1() {
+		window.location.href = 'http://www.naver.com';		
+	}
+	
+	function locationPage2() {
+		window.location.href = 'http://www.google.com';		
+	}
+	
+	function locationPage3() {
+		window.location.href = 'http://www.daum.net';		
+	} */
+	
+	/* 매개변수를 사용해서 한줄로 만들 수 있음 */
+	function locationPage(page) {
+		if(page == 'naver') {
+			window.open('about:blank').location.href = 'http://www.naver.com';
+		} else if(page == 'google') {
+			window.open('about:blank').location.href = 'http://www.google.com';		
+		} else if(page == 'daum') {
+			window.open('about:blank').location.href = 'http://www.daum.net';	
+		}
+	}
+	
+	function historyPage(page) {
+	
+		
+		let hienght: windw.history.lengtj;		if(page == 'prev') {
+			window.history.back();		
+		} else (page == 'next') {
+			window.history.forward();
+			
+		}
+	}
+</script>
 </head>
 
 <body>
-
+	<h1>Browse Object Model</h1>
+	<button type="button" onclick='locationPage("naver")'z>네이버</button>
+	<button type="button" onclick='locationPage("google")'>구글</button>
+	<button type="button" onclick='locationPage("daum")'>다음</button>
+	
+	<button type="button" onclick='historyPage("prev")'>Prev</button>
+	<button type="button" onclick='historyPage("next")'>Next</button>
 </body>
 </html>

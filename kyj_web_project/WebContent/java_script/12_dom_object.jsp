@@ -60,8 +60,17 @@
 		}
 		
 		function show() {
-			document.getElementsByClassName("sub_menu")[0].style.display = "block";
+			let checkValue = document.getElementsByClassName("sub_menu")[0].id;
+			if (checkValue == 'hide') {
+			document.getElementsByClassName("sub_menu")[0].style.display = 'block';
+			document.getElementsByClassName("sub_menu")[0].id = 'show';
+			} else {
+				document.getElementsByClassName("sub_menu")[0].style.display = "none";
+				document.getElementsByClassName("sub_menu")[0].id = 'hide';
+			}
 		}
+			
+			
 		
 		
 	</script>
@@ -81,7 +90,7 @@
 			</ul>	
 		</div>
 		
-		<div class = "sub_menu"></div>
+		<div class = "sub_menu"'id='hide'></div>
 
 	</div>
 </body>
