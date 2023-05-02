@@ -11,7 +11,11 @@
 		/*
 			형식: $(선택자).메소드();
 		*/
+		$(document).ready(function() { /* window.onload 함수와 동일한 기능 수행 */
+			alert("안뇽~");
+		});
 	</script>
+	
 </head>
 
 
