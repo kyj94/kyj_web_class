@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>ju_myCGV</title>
 	<link rel="stylesheet" href="http://localhost:9000/ju_myCGV/css/mycgv.css">
+	<script src="http://localhost:9000/ju_myCGV/jsp/myCGV_javascript.js"></script>
 </head>
 
 <body>
@@ -19,17 +20,17 @@
 				<ul>
 					<li>
 						<label>아이디</label>
-						<input type="text" name="id">
+						<input type="text" name="id" id="id">
 					</li>
 					
 					<li>
 						<label>패스워드</label>
-						<input type="password" name="pass">
+						<input type="password" name="pass" id="pass">
 					</li>
 					
 					<li>
-						<button class="btn_style" type="button">로그인</button>
-						<button class="btn_style" type="reset">다시쓰기</button>
+						<button class="btn_style" type="button" onclick="loginCheck()">로그인</button>
+						<button class="btn_style" type="button" onclick="loginReset()">다시쓰기</button>
 					</li>
 					
 					<li>
