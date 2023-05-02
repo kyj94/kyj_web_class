@@ -10,7 +10,6 @@
 		$(document).ready(function(){
 			$("span").click(function(){
 				let id = $(this).attr("id");
-				alter(id);
 				
 				if(id == "event") {
 					$("img").attr("src","../images/main_moviecollage.jpg");
