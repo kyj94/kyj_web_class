@@ -127,10 +127,10 @@ function passCheck() {
 	// pass, cpass 유효성체크 먼저 수행!
 	let pass = document.getElementById("pass");
 	let capss = document.getElementById("cpass");
-	let cmsg = document.getElementById("cmsg")
+	let cmsg = document.getElementById("cmsg");
 	
 	// pass, cpass의 값이 있는 경우에만 체크
-	if(pass.value == "") {
+	/*if(pass.value == "") {
 		alert("패스워드를 입력해주세요.");
 		pass.focus();
 	} else {
@@ -139,13 +139,13 @@ function passCheck() {
 		cpass.focus();
 		} else {
 			if(pass.value == cpass.value) {
-				/*alert("패스워드가 동일합니다.");*/
+				alert("패스워드가 동일합니다.");
 				cmsg.innerHTML = "패스워드가 동일합니다.";
 				cmsg.style.color ="blue";
 				cmsg.style.display = "block";
 				document.getElementById("name").focus();
 			} else {
-				/*alert("패스워드가 동일하지 않습니다. 다시 입력해주세요.");*/
+				alert("패스워드가 동일하지 않습니다. 다시 입력해주세요.");
 				cmsg.innerHTML = "패스워드가 동일하지 않습니다. 다시 입력해주세요.";
 				cmsg.style.color ="red";
 				cmsg.style.display = "block";
@@ -154,12 +154,63 @@ function passCheck() {
 				pass.focus();
 			}
 		}
+	}*/
+	
+	// pass, cpass의 값이 있는 경우에만 체크
+	if(pass.value != "" && cpass.value != "") {
+		if(pass.value == cpass.value) {
+			cmsg.innerHTML = "패스워드가 동일합니다.";
+			cmsg.style.color ="blue";
+			cmsg.style.display = "block";
+			cmsg.style.padding = "30xp 0px";
+			cmsg.style.fontSize = "11px";
+			document.getElementById("name").focus();
+		} else {
+			cmsg.innerHTML = "패스워드가 동일하지 않습니다. 다시 입력해주세요.";
+			cmsg.style.color ="red";
+			cmsg.style.display = "block";
+			cmsg.style.padding = "30xp 0px";
+			cmsg.style.fontSize = "11px";
+			pass.value = "";
+			cpass.value = "";
+			pass.focus();
+		}	
 	}
+	
 } // function
 
 
+/*******************************************************************************
+	회원가입 폼 체크 - 이메일 체크
+******************************************************************************/
+function emailCheck() {
+	let email2 = document.getElementById("email2");
+	let email3 = document.getElementById("email3");
+	
+	if (email3.value == "default") {
+		/*alert("이메일 주소를 선택해주세요.");*/
+		email3.focus();
+		email2.value = "";
+	} else if (email3.value == "self") {
+		email2.value = "";
+		email2.focus();
+	} else {
+		email2.value = email3.value;
+	}
+}
 
 
+/*******************************************************************************
+	주소API
+******************************************************************************/
+function searchAddr() {
+	new daum.Postcode({
+        oncomplete: function(data) {
+        	document.getElementById("addr1").value = "(" + data.zonecode + ") " + data.address;
+        }
+    }).open();
+	document.getElementById("addr2").focus();
+} // function
 
 
 
