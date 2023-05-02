@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Login Form Check
+	Login Form Check
  ******************************************************************************/
 function loginCheck() {
 	let id = document.getElementById("id");
@@ -19,7 +19,7 @@ function loginCheck() {
 }
 
 /*******************************************************************************
- * Login Form - 다시쓰기
+	Login Form - 다시쓰기
  ******************************************************************************/
 function loginReset() {
 	document.getElementById("id").value = "";
@@ -28,12 +28,8 @@ function loginReset() {
 }
 
 /*******************************************************************************
- * 회원가입 폼 체크
+	회원가입 폼 체크
  ******************************************************************************/
-function joinCheck() {
-
-}
-
 function joinCheck() {
 	let id = document.getElementById("id");
 	let pass = document.getElementById("pass");
@@ -66,7 +62,10 @@ function joinCheck() {
 		return false;
 	} else if (checkCount("gender") == 0) {
 		alert("성별을 선택해 주세요.");
-		/*document.getElementsByName('gender')[0].focus().style.border='1px dotted red';*/
+		/*
+		 * document.getElementsByName('gender')[0].focus().style.border='1px
+		 * dotted red';
+		 */
 		return false;
 	} else if (email1.value == "") {
 		alert("이메일을 입력해주세요.");
@@ -86,7 +85,7 @@ function joinCheck() {
 		return false;
 	} else if (checkCount("tel") == 0) {
 		alert("통신사를 선택해 주세요.");
-		/*document.getElementById("phoneCheck").style.border="5px solid red";*/
+		/* document.getElementById("phoneCheck").style.border="5px solid red"; */
 		return false;
 	} else if (phone1.value == "default") {
 		alert("핸드폰번호를 선택해주세요.");
@@ -119,3 +118,56 @@ function checkCount(tagName) {
 	} // for
 	return count;
 }
+
+
+/*******************************************************************************
+	회원가입 폼 체크 -비밀번호 & 비밀번호 확인
+******************************************************************************/
+function passCheck() {
+	// pass, cpass 유효성체크 먼저 수행!
+	let pass = document.getElementById("pass");
+	let capss = document.getElementById("cpass");
+	let cmsg = document.getElementById("cmsg")
+	
+	// pass, cpass의 값이 있는 경우에만 체크
+	if(pass.value == "") {
+		alert("패스워드를 입력해주세요.");
+		pass.focus();
+	} else {
+		if (cpass.value == "") {
+		alert("패스워드 확인을 입력해주세요.");
+		cpass.focus();
+		} else {
+			if(pass.value == cpass.value) {
+				/*alert("패스워드가 동일합니다.");*/
+				cmsg.innerHTML = "패스워드가 동일합니다.";
+				cmsg.style.color ="blue";
+				cmsg.style.display = "block";
+				document.getElementById("name").focus();
+			} else {
+				/*alert("패스워드가 동일하지 않습니다. 다시 입력해주세요.");*/
+				cmsg.innerHTML = "패스워드가 동일하지 않습니다. 다시 입력해주세요.";
+				cmsg.style.color ="red";
+				cmsg.style.display = "block";
+				pass.value = "";
+				cpass.value = "";
+				pass.focus();
+			}
+		}
+	}
+} // function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
