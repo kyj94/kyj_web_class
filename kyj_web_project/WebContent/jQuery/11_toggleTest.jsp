@@ -55,7 +55,8 @@
 <body>
 	<h1>Toggle Test - 댓글처리</h1>
 	<div class="drow">
-		<p id="p1">댓글 - 제목 #1</p>
+		<!-- primary key 가 p에 들어가야 함 -->
+		<p id="p1">댓글 - 제목 #1</p> 
 		<div id="d_p1">내용 #1</div>
 	</div>
 	
