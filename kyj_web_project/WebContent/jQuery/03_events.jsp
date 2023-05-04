@@ -26,7 +26,7 @@
 			});
 			
 			$("btn3")on({
-				click:function()("hello jQuery");
+				click:function(){"hello jQuery"};
 			}, 
 			mouseenter:function(){
 				$("btn2").css("background", "tomato");
