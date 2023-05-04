@@ -60,7 +60,7 @@ $(document).ready(function() {
 				// 이전 출력화면 삭제 필요
 				$("div#d2").remove();
 				/*$("body").append(code);*/
-				$().before(); // p1
+				/*$().before();*/ // p1 앞에 출력
 				$("#d1").after(code); //d1 다음에 출력
 				$("#p1").css("background", "tomato");
 			});	 // getJSON	

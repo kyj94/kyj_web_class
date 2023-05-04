@@ -38,10 +38,6 @@
 			margin:10px 5px;
 		}
 		
-		#select {
-		
-		
-		}
 	</style>
 
 </head>
