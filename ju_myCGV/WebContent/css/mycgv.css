@@ -468,10 +468,12 @@ form[name='joinForm'] ul li:last-child button:first-child {
 	margin-right: 10px;
 }
 
-form[name='joinForm'] ul #cmsg {
+span#cmsg {
 	/* border:1px solid red; */
 	display:none;
-	margin:7px 0px 10px 0px;
+	width:500px;
+	margin-left:50px;
+	padding-right:50px;
 }
 
 /************************************

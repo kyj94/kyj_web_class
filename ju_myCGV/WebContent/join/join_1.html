@@ -4,10 +4,8 @@
 	<meta charset="UTF-8">
 	<title>ju_myCGV</title>
 	<link rel="stylesheet" href="http://localhost:9000/ju_myCGV/css/mycgv.css">
-	
-	<script src="http://localhost:9000/ju_myCGV/js/jquery-3.6.4.min.js"></script>
+	<script src="http://localhost:9000/ju_myCGV/jsp/myCGV_javascript.js"></script>
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-	<script src="http://localhost:9000/ju_myCGV/js/myCGV_jQuery.js"></script>
 </head>
 
 <body>
@@ -34,7 +32,7 @@
 					
 					<li>
 						<label>비밀번호 확인</label>
-						<input class="input1" type="password" name="cpass" id="cpass">
+						<input class="input1" type="password" name="cpass" id="cpass" onblur="passCheck()">
 						<span id="cmsg"></span>
 					</li>
 					
@@ -53,20 +51,21 @@
 						<label>이메일</label>
 						<input class="email" type="text" name="email1" id="email1"> @
 						<input class="email" type="text" name="email2" id="email2">
-						<select id="email3">
+						<select id="email3" onchange="emailCheck()">
 							<option value="default">선택</option>
 							<option value="naver.com">네이버</option>
 							<option value="gmail.com">구글</option>
 							<option value="daum.net">다음</option>
 							<option value="korea.com" >코리아</option>
 							<option value="self" >직접입력</option>
+							
 						</select>
 					</li>
 					
 					<li>
 						<label>주소</label>
 						<input class="input1" type="text" name="addr1" id="addr1">
-						<button class="btn_style2" type="button" id="btnSearchAddr">주소찾기</button>
+						<button class="btn_style2" type="button" onclick="searchAddr()">주소찾기</button>
 					</li>
 					<li>
 						<label>상세주소</label>
@@ -98,7 +97,7 @@
 						<textarea name="intro" placeholder="*200자 이내로 작성해주세요"></textarea>
 					</li>
 					<li>
-						<button class="btn_style" type="button" id="btnJoin">가입하기</button>
+						<button class="btn_style" type="button" onclick="joinCheck()">가입하기</button>
 						<button class="btn_style" type="reset">다시입력</button>
 					</li>			
 				</ul>
