@@ -197,19 +197,21 @@ $(document).ready(function() {
 		}
 	}
 	
+	let boxOffice = kobis.boxOfficeResult;
 	
-	let code = "<h1>박스 오피스 종류: " + kobis.boxOfficeResult.boxofficeType + "</h1>";
-	code += "<h2>조회일자: "+kobis.boxOfficeResult.showRange +"</h2>";
+	let code = "<h1>제목 : " + boxOffice.boxofficeType + "</h1>";
+	code += "<h2>기간 : "+  boxOffice.showRange +"</h2>";
 	code += "<h2>인기 순위</h2>";
 	
-	code += "<table><tr><th>순위</th><th>제목</th><th>개봉일</th><th>누적 관객수</th></tr>";
+	code += "<table><tr><th>순위</th><th>제목</th><th>개봉일</th><th>누적 관객수</th><th>누적 관객수</th>상영횟수</tr>";
 	
-	for(score of kobis.boxOfficeResult.dailyBoxOfficeList) {
+	for(score of boxOffice.dailyBoxOfficeList) {
 		code += "<tr>";
 		code += "<td>" +score.rank + "</td>";
 		code += "<td>" +score.movieNm + "</td>";
 		code += "<td>" +score.openDt + "</td>";
 		code += "<td>" +score.audiAcc + "</td>";
+		code += "<td>" +score.showCnt + "</td>";
 		code += "</tr>";
 	}
 	
