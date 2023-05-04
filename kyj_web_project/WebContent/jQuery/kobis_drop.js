@@ -16,12 +16,12 @@ $(document).ready(function() {
 			let ktype = $("#kselect").val();
 			let url = "";
 			
-			if(ktype == "day") {
+			if(ktype == "Daily") {
 				// 일별 박스오피스 url 생성
-				url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt="+kdate;
+				url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/search" + ktype + "BoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt="+kdate;
 			} else {
 				// 주말 박스오피스 url 생성
-				url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt="+kdate;
+				url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/search" + ktype + "BoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt="+kdate;
 			}
 			
 			$.getJSON(url, function(kobis) {
@@ -29,11 +29,21 @@ $(document).ready(function() {
 				
 				let boxOffice = kobis.boxOfficeResult;
 				
-				let code = "<h1>제목 : " + boxOffice.boxofficeType + "</h1>";
+				let code = "<div id='d2'>";
+				
+				code += "<h1>제목 : " + boxOffice.boxofficeType + "</h1>";
 				code += "<h2>기간 : "+  boxOffice.showRange +"</h2>";
 				code += "<table><tr><th>순위</th><th>제목</th><th>개봉일</th><th>누적 관객수</th><th>상영횟수</th></tr>";
 				
-				for(score of boxOffice.dailyBoxOfficeList) {
+				let listName = null;
+				
+				if(ktype == "Daily") {
+					listName = boxOffice.dailyBoxOfficeList;
+				} else {
+					listName = boxOffice.weeklyBoxOfficeList;
+				}
+					
+				for(score of listName) {
 					code += "<tr>";
 					code += "<td>" +score.rank + "</td>";
 					code += "<td>" +score.movieNm + "</td>";
@@ -44,11 +54,16 @@ $(document).ready(function() {
 				}
 				
 				code += "</table>";
+				code += "</div>";
 				
 				// 3. body 위치에 append
 				// 이전 출력화면 삭제 필요
-				$("body").append(code);
-			});	 // getJSON		
+				$("div#d2").remove();
+				/*$("body").append(code);*/
+				$().before(); // p1
+				$("#d1").after(code); //d1 다음에 출력
+				$("#p1").css("background", "tomato");
+			});	 // getJSON	
 			
 		}
 		

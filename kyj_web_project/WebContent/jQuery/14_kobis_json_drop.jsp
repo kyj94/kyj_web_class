@@ -53,13 +53,15 @@
 		<span>박스오피스 선택</span>
 		<select id="kselect">
 			<option value='defult'>선택</option>
-			<option value='day'>일별</option>
-			<option value='week'>주간</option>
+			<option value='Daily'>일별</option>
+			<option value='Weekly'>주간</option>
 		</select>
 		
 		<input type="text" placeholder='날짜입력 예)20230504' id='date'></input>
 		<button id='btnKobis'>실행</button>
 		
 	</div>
+	
+	<p id="p1">박스오피스 실행결과는 위에 넣어주세요.</p>
 </body>
 </html>
