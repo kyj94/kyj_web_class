@@ -9,7 +9,7 @@
 <body>
 	<h1>Hello JSP</h1>
 	<%
-		out.write("JSP 실행");
+		out.write("JSP 실행!");
 	%>
 </body>
 </html>
