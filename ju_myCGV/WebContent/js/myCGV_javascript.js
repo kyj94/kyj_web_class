@@ -157,7 +157,7 @@ function passCheck() {
 	}*/
 	
 	// pass, cpass의 값이 있는 경우에만 체크
-	if(pass.value != "" && cpass.value != "") {
+	/*if(pass.value != "" && cpass.value != "") {
 		if(pass.value == cpass.value) {
 			cmsg.innerHTML = "패스워드가 동일합니다.";
 			cmsg.style.color ="blue";
@@ -175,6 +175,28 @@ function passCheck() {
 			cpass.value = "";
 			pass.focus();
 		}	
+	}*/
+	
+	if(pass.value != "") {
+		if(cpass.balue != "") {
+			if(pass.value == cpass.value) {
+				cmsg.innerHTML = "패스워드가 동일합니다.";
+				cmsg.style.color ="blue";
+				cmsg.style.display = "block";
+				cmsg.style.padding = "30xp 0px";
+				cmsg.style.fontSize = "11px";
+				document.getElementById("name").focus();
+			} else {
+				cmsg.innerHTML = "패스워드가 동일하지 않습니다. 다시 입력해주세요.";
+				cmsg.style.color ="red";
+				cmsg.style.display = "block";
+				cmsg.style.padding = "30xp 0px";
+				cmsg.style.fontSize = "11px";
+				pass.value = "";
+				cpass.value = "";
+				pass.focus();
+			}	
+		}
 	}
 	
 } // function
@@ -196,6 +218,7 @@ function emailCheck() {
 		email2.focus();
 	} else {
 		email2.value = email3.value;
+		email2.disabled = true;
 	}
 }
 
@@ -207,18 +230,42 @@ function searchAddr() {
 	new daum.Postcode({
         oncomplete: function(data) {
         	document.getElementById("addr1").value = "(" + data.zonecode + ") " + data.address;
+        	document.getElementById("addr2").focus();
         }
     }).open();
-	document.getElementById("addr2").focus();
 } // function
 
 
+/*******************************************************************************
+	게시판
+******************************************************************************/
+function boardFormCheck() {
+	let btitle = document.getElementById("btitle");
+	
+	if(btitle.value == "") {
+		alert("제목을 입력해주세요.");
+		btitle.focus();
+	} else {
+		// 서버 전송
+		writeForm.submit();
+	}
+}
 
 
-
-
-
-
+/*******************************************************************************
+	관리자 공지사항
+******************************************************************************/
+function adminFormCheck() {
+	let ntitle = document.getElementById("ntitle");
+	
+	if(ntitle.value == "") {
+		alert("제목을 입력해주세요.");
+		ntitle.focus();
+	} else {
+		// 서버 전송
+		writeForm.submit();
+	}
+}
 
 
 
