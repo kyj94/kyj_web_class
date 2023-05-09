@@ -15,7 +15,7 @@
 			<form name="joinForm" action="07_joinCheck.jsp" method="post">
 				<ul>
 					<li>
-						<label>아이디</label>
+						<label>아이디1</label>
 						<input class="input1" type="text" name="id" placeholder="*8자 이상 영문으로 입력해주세요" id="id">
 						<button class="btn_style2" type="button">중복체크</button>
 					</li>
