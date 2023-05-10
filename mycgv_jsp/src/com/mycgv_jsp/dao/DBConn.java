@@ -1,4 +1,4 @@
-package com.beans.mycgv;
+package com.mycgv_jsp.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,11 +19,11 @@ public class DBConn {
 		try {
 			// 1. 드라이버 로딩
 			Class.forName(driver);
-			System.out.println("--> 1. 드라이버 로딩 성공");
+			/* System.out.println("--> 1. 드라이버 로딩 성공"); */
 			
 			// 2. Connection 객체 생성
 			conn = DriverManager.getConnection(url, user, pass);
-			System.out.println("--> 2. Connection 성공");
+			/* System.out.println("--> 2. Connection 성공"); */
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

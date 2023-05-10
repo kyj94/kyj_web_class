@@ -1,28 +1,20 @@
-package com.beans.mycgv;
+package com.mycgv_jsp.vo;
 
-public class JoinVo {
-	// Field --> Form의 name = Vo의 field = DB 테이블의 컬럼명은 반드시 동일한 이름으로 정의
-	// 선언된 변수는 Vo에도 있어야 함
-	String id, pass, name, gender, email1, email2, addr1, addr2, 
-			tel, phone1, phone2, phone3, intro;
+public class MemberVo {
+	// 폼에서 넘어오는 모든 name/value 저장
+	String id, pass, name, gender, email1, email2, addr1, addr2, tel, phone1, phone2, phone3, intro;
 	String[] hobby;
 	
-	// 데이터가공: email, addr, phoneNumber, hobbyList ---> getter/setter 필요여부X -> getter만 필요
-	String email, addr, phoneNumber, hobbyList;
+	// 폼에는 없지만 member 테이블 컬럼 매핑
+	int rno;
+	String email, addr, pnumber, hobbyList, mdate;
+	/*
+	 * email, addr, pnumber, hobbyList
+	 * 폼에서 set X, 테이블에서 set O
+	 * 폼에서 get O(email1 + "@" + email2), 테이블에서 get O
+	 * */
 	
 	
-	public String getEmail() {
-		return email1 + "@" + email2;
-	}
-	public String getAddr() {
-		return addr1 + " " + addr2;
-	}
-	public String getPhoneNumber() {
-		return phone1 + "-" + phone2 + "-" + phone3;
-	}
-	public String getHobbyList() {
-		return String.join(", ", hobby);
-	}
 	public String getId() {
 		return id;
 	}
@@ -107,5 +99,57 @@ public class JoinVo {
 	public void setHobby(String[] hobby) {
 		this.hobby = hobby;
 	}
+	public int getRno() {
+		return rno;
+	}
+	public void setRno(int rno) {
+		this.rno = rno;
+	}
+	public String getEmail() {
+		if(email1 != null) { // 폼에서 email주소가 넘어온 경우
+			email = email1 + "@" + email2;
+		}
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getAddr() {
+		if(addr1 != null) { // 폼에서 email주소가 넘어온 경우
+			addr = addr1 + " " + addr2;
+		}
+		return addr;
+	}
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	public String getPnumber() {
+		if(phone1 != null) {
+			pnumber = phone1 + "-" + phone2 + "-" + phone3;
+		}
+		return pnumber;
+	}
+	public void setPnumber(String pnumber) {
+		this.pnumber = pnumber;
+	}
+	public String getHobbyList() {
+		if(hobby != null) {
+			hobbyList = String.join(", ",hobby);
+		}
+		return hobbyList;
+	}
+	public void setHobbyList(String hobbyList) {
+		this.hobbyList = hobbyList;
+	}
+	public String getMdate() {
+		return mdate;
+	}
+	public void setMdate(String mdate) {
+		this.mdate = mdate;
+	}
+	
+	
+	
 	
 }
+
