@@ -19,7 +19,7 @@
 	<div class="content">
 		<section class="board">
 			<h1 class="title">게시판</h1>
-			<form name="writeForm" action="boardWtrteProc.jsp" method="post">
+			<form name="writeForm" action="boardWriteProc.jsp" method="post">
 				<table>
 					<tr>
 						<th class="test">제목</th>
@@ -37,7 +37,8 @@
 					<tr>
 						<th>작성자</th>
 						<td>
-							<input type="text" name="id" value="hong">
+							<input type="text" name="id" value="hong" disabled>
+							<input type="hidden" name="id" value="hong">
 						</td>
 					</tr>
 					<tr>
