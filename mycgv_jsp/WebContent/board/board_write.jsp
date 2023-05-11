@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <title>MYCGV</title>
 <link rel="stylesheet" href="http://localhost:9000/mycgv_jsp/css/mycgv_jsp.css">
-<script src="http://localhost:9000/mycgv_jsp/js/mycgv_jsp_javascript.js"></script>
+<script src="http://localhost:9000/mycgv_jsp/js/jquery-3.6.4.min.js"></script>
+<script src="http://localhost:9000/mycgv_jsp/js/mycgv_jsp_jquery.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -18,7 +19,7 @@
 	<div class="content">
 		<section class="board">
 			<h1 class="title">게시판</h1>
-			<form name="writeForm" action="#" method="get">
+			<form name="writeForm" action="boardWtrteProc.jsp" method="post">
 				<table>
 					<tr>
 						<th class="test">제목</th>
@@ -36,12 +37,12 @@
 					<tr>
 						<th>작성자</th>
 						<td>
-							<input type="text" name="id" value="hong1234" disabled>
+							<input type="text" name="id" value="hong">
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<button type="button" class="btn_style" onclick="boardFormCheck()">등록완료</button>
+							<button type="button" class="btn_style" id="btnBoardWrite">등록완료</button>
 							<button type="reset" class="btn_style">다시쓰기</button>
 							<a href="board_list.jsp">
 								<button type="button" class="btn_style">리스트</button></a>

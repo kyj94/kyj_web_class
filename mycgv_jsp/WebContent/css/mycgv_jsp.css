@@ -360,6 +360,12 @@ form[name='joinForm'] ul #cmsg {
 	margin:7px 0px 7px 170px; 
 }
 
+form[name='joinForm'] ul #idcheck_cmsg {
+	/* border:1px solid red;  */
+	display:none;
+	margin:7px 0px 7px 170px; 
+}
+
 
 
 /*****************************

@@ -19,7 +19,7 @@
 	<div class="content">
 		<section class="login">
 			<h1 class="title">로그인</h1>
-			<form name="loginForm" action="#" method="get" >
+			<form name="loginForm" action="loginProc.jsp" method="post" >
 				<ul>
 					<li>
 						<label>아이디</label>

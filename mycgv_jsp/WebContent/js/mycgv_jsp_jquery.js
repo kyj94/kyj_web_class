@@ -1,9 +1,32 @@
 $(document).ready(function(){
-	
 	/*******************************************
-		게시판 글쓰기 폼 체크
+	회원가입 폼 체크 - 아이디 중복체크
 	********************************************/
-	
+	$("#btnIdCheck").click(function() {
+	/*$("#id").blur(function() {*/
+		if($("#id").val() == "") {
+			alert("아이디를 입력해주세요");
+			$("#id").focus();
+			return false;
+		/*} else if($("#id").val().length < 8) {
+			alert("8자 이상 입력해주세요");*/
+		} else { 
+			$.ajax({
+				url : "idCheckProc.jsp?id=" + $("#id").val(),
+				success : function(result) {
+					if(result == 1) {
+						$("#idcheck_cmsg").text("이미 사용중인 아이디 입니다. 다시 입력해주세요")
+						.css("color", "red").css("font-size", "11px").css("display", "block").css("padding", "8px 0px 8xp 150px");
+						$("#id").val("");
+					} else if (result == 0)	 {
+						$("#idcheck_cmsg").text("사용 가능한 아이디 입니다").css("color", "blue")
+						.css("font-size", "11px").css("display", "block").css("padding", "8px 0px 8xp 150px");
+						$("#pass").focus();
+						}
+				}
+			});
+		}
+	});
 		
 	
 	
@@ -64,7 +87,9 @@ $(document).ready(function(){
 			alert("아이디를 입력해주세요");
 			$("#id").focus();
 			return false;
-		}else if($("#pass").val() == ""){
+		} else if($("#idcheck_cmsg").text()=="") {
+			alert("중복체크를 눌러주세요");
+		} else if($("#pass").val() == ""){
 			alert("패스워드를 입력해주세요");
 			$("#pass").focus();
 			return false;
@@ -113,7 +138,7 @@ $(document).ready(function(){
 		}else if($("input[name='hobby']:checked").length == 0){
 			alert("취미를 선택해주세요");
 			return false;
-		}else{
+		} else{
 			//서버전송
 			joinForm.submit();
 		}
@@ -146,9 +171,37 @@ $(document).ready(function(){
 		$("#pass").val("");
 	}); //btnLoginReset click
 
+
+
+
+
+	/*******************************************
+		게시판 - 등록폼
+	********************************************/
+	$("#btnBoardWrite").click(function() {
+		
+		if($("#btitle").val()=="") {
+			alert("제목을 입력해주세요");
+			$("#btitle").focus();
+			return false;
+		} else {
+			writeForm.submit();
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }); //ready
-
-
-
-
-
