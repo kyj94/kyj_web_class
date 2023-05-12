@@ -1,11 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ page import = "com.mycgv_jsp.vo.BoardVo" %>     
+<%@ page import = "com.mycgv_jsp.dao.BoardDao" %>   
+
+<%	
+	String bid = request.getParameter("bid"); // pk값 갖고오기
+	BoardDao boardDao = new BoardDao();
+%> 
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>MYCGV</title>
 <link rel="stylesheet" href="http://localhost:9000/mycgv_jsp/css/mycgv_jsp.css">
+
+<script src="http://localhost:9000/mycgv_jsp/js/jquery-3.6.4.min.js"></script>
+<script src="http://localhost:9000/mycgv_jsp/js/mycgv_jsp_jquery.js"></script>
+
 </head>
 <body>
 	<!-- header -->
@@ -17,7 +30,8 @@
 	<div class="content">
 		<section class="board">
 			<h1 class="title">게시판</h1>
-			<form name="deleteForm" action="#" method="get">
+			<form name="deleteForm" action="boardDeleteProc.jsp" method="post">
+				<input type="hidden" name="bid" value="<%= bid %>">
 				<table>
 					<tr>
 						<td><img src="http://localhost:9000/mycgv_jsp/images/trash.jpg"></td>
@@ -27,8 +41,8 @@
 					</tr>				
 					<tr>
 						<td colspan="2">
-							<button type="button" class="btn_style">삭제완료</button>
-							<a href="board_content.jsp">
+							<button type="submit" class="btn_style">삭제완료</button>
+							<a href="board_content.jsp?<%= bid %>">
 								<button type="button" class="btn_style">이전페이지</button></a>
 							<a href="board_list.jsp">
 								<button type="button" class="btn_style">리스트</button></a>
