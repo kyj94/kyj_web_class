@@ -1,11 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ page import = "com.mycgv_jsp.vo.MemberVo" %>     
+<%@ page import = "com.mycgv_jsp.dao.MemberDao" %>   
+<%@ page import = "java.util.ArrayList" %>  
+
+<% 
+	String sid = (String)session.getAttribute("sid");
+	if(sid == null) {
+		out.write("<script>");
+		out.write("alert('정상적인 접근 방식이 아닙니다. 로그인을 진행해주세요.');");
+		out.write("location.href = 'http://localhost:9000/mycgv_jsp/login/login.jsp';");
+		out.write("</script>");
+	} else {
+		if(!sid.equals("admin")) {
+			out.write("<script>");
+			out.write("alert('관리자 접근 권한이 필요합니다. 다시 로그인을 진행해주세요.');");
+			out.write("location.href = 'http://localhost:9000/mycgv_jsp/login/login.jsp';");
+			out.write("</script>");
+		} else {
+		MemberDao memberDao = new MemberDao();
+		// 전체 리스트 가져오기
+		ArrayList<MemberVo> list = memberDao.select();
+%>  
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>MYCGV</title>
+
 <link rel="stylesheet" href="http://localhost:9000/mycgv_jsp/css/mycgv_jsp.css">
+
 </head>
 <body>
 	<!-- header -->
@@ -25,40 +52,17 @@
 					<th>가입일자</th>
 					<th>회원등급</th>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>hong1234</td>
-					<td>홍길동</td>
-					<td>2021-10-07</td>
-					<td>GOLD</td>
-				</tr><tr>
-					<td>2</td>
-					<td>hong1234</td>
-					<td>홍길동</td>
-					<td>2021-10-07</td>
-					<td>GOLD</td>
-				</tr>				
-				<tr>
-					<td>3</td>
-					<td>hong1234</td>
-					<td>홍길동</td>
-					<td>2021-10-07</td>
-					<td>GOLD</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>hong1234</td>
-					<td>홍길동</td>
-					<td>2021-10-07</td>
-					<td>GOLD</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>hong1234</td>
-					<td>홍길동</td>
-					<td>2021-10-07</td>
-					<td>GOLD</td>
-				</tr>				
+				
+				<% for(MemberVo memberVo : list) { %>
+					<tr>
+						<td><%= memberVo.getRno() %></td>
+						<td><%= memberVo.getId() %></td>
+						<td><%= memberVo.getName() %></td>
+						<td><%= memberVo.getMdate() %></td>
+						<td><%= memberVo.getGrade() %></td>
+					</tr>
+				<% } %>
+				
 				<tr>
 					<td colspan="5"><< 1  2  3  4  5 >></td>
 				</tr>
@@ -73,18 +77,6 @@
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<% }} %>
 
 

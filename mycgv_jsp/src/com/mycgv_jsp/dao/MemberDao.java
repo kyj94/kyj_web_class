@@ -1,13 +1,15 @@
 package com.mycgv_jsp.dao;
 
+import java.util.ArrayList;
+
 import com.mycgv_jsp.vo.MemberVo;
 
 public class MemberDao extends DBConn {
 	/** insert - 회원 가입 **/
 	public int insert(MemberVo memberVo) {
 		int result = 0;
-		String sql = "insert into MYCGV_MEMBER(id, pass, name, gender, email, addr, tel, pnumber, hobbylist, intro, mdate)"
-				+ " values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, sysdate)";
+		String sql = "insert into MYCGV_MEMBER(id, pass, name, gender, email, addr, tel, pnumber, hobbylist, intro, mdate, grade)"
+				+ " values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, sysdate, 'GOLD')";
 		getPreparedStatement(sql);
 		
 		try {
@@ -23,7 +25,6 @@ public class MemberDao extends DBConn {
 			pstmt.setString(10, memberVo.getIntro());
 
 			result = pstmt.executeUpdate();
-			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -80,6 +81,36 @@ public class MemberDao extends DBConn {
 	
 		return result;
 	} // loginCheck(MemberVo memberVo)
+	
+	
+	/** select - 회원 전체 리스트 **/
+	public ArrayList<MemberVo> select() {
+		ArrayList<MemberVo> list = new ArrayList<MemberVo>();
+		
+		String sql= "SELECT ROWNUM RNO, ID, NAME, to_char(MDATE, 'yy-mm-dd') MDATE, GRADE " 
+					+ " FROM(SELECT * FROM MYCGV_MEMBER ORDER BY MDATE DESC)";
+		getPreparedStatement(sql);
+		
+		try {
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				MemberVo memberVo = new MemberVo();
+				memberVo.setRno(rs.getInt(1));
+				memberVo.setId(rs.getString(2));
+				memberVo.setName(rs.getString(3));
+				memberVo.setMdate(rs.getString(4));
+				memberVo.setGrade(rs.getString(5));
+				
+				list.add(memberVo);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	} // ArrayList<MemberVo> select()
 	
 	
 

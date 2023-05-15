@@ -1,11 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<% 
+	String sid = (String)session.getAttribute("sid");
+	if(sid == null) {
+		out.write("<script>");
+		out.write("alert('정상적인 접근 방식이 아닙니다. 로그인을 진행해주세요.');");
+		out.write("location.href = 'http://localhost:9000/mycgv_jsp/login/login.jsp';");
+		out.write("</script>");
+	} else {
+%>    
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>MYCGV</title>
 <link rel="stylesheet" href="http://localhost:9000/mycgv_jsp/css/mycgv_jsp.css">
+
 </head>
 <body>
 	<!-- header -->
@@ -31,9 +44,7 @@
 </body>
 </html>
 
-
-
-
+<% } %>
 
 
 

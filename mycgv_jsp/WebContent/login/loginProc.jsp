@@ -10,6 +10,8 @@
 	MemberDao memberDao = new MemberDao();
 	int result = memberDao.loginCheck(memberVo);
 	if (result == 1) {
+		session.setAttribute("sid", memberVo.getId());
+		
 		/* response.sendRedirect("http://localhost:9000/mycgv_jsp/index.jsp"); */
 		out.write("<script>");
 		out.write("alert('로그인 성공');");
@@ -18,7 +20,7 @@
 	} else {
 		//로그인 실패
 		out.write("<script>");
-		out.write("alert('아이디 또는 패스워고시 다름니다');");
+		out.write("alert('아이디 또는 패스워고시 다릅니다');");
 		out.write("location.href = 'http://localhost:9000/mycgv_jsp/login/login.jsp'");
 		out.write("</script>");
 	}

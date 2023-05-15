@@ -2,7 +2,8 @@ package com.mycgv_jsp.vo;
 
 public class MemberVo {
 	// 폼에서 넘어오는 모든 name/value 저장
-	String id, pass, name, gender, email1, email2, addr1, addr2, tel, phone1, phone2, phone3, intro;
+	String id, pass, name, gender, email1, email2, addr1, addr2, tel, phone1, phone2, phone3, intro, grade;
+	
 	String[] hobby;
 	
 	// 폼에는 없지만 member 테이블 컬럼 매핑
@@ -148,8 +149,15 @@ public class MemberVo {
 		this.mdate = mdate;
 	}
 	
-	
-	
-	
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+
+
+
 }
 
