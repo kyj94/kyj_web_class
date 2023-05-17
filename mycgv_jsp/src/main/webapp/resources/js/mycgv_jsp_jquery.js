@@ -12,7 +12,7 @@ $(document).ready(function(){
 			alert("8자 이상 입력해주세요");*/
 		} else { 
 			$.ajax({
-				url : "idCheckProc.jsp?id=" + $("#id").val(),
+				url : "id_check.do?id=" + $("#id").val(),
 				success : function(result) {
 					if(result == 1) {
 						$("#idcheck_cmsg").text("이미 사용중인 아이디 입니다. 다시 입력해주세요")
