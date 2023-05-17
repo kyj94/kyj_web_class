@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Navigator Bars</title>
+	<style>
+		ul {
+			/* border:1px solid red; */
+			list-style-type:none;
+			padding:0px;
+			margin:0px;
+			width:600px;
+			background:#555;
+			/* height:50px; */
+			overflow:hidden;
+		}
+		
+		ul li {
+			/* border:1px solid blue; */
+			/* width:100px;
+			height:20px; */
+			float:left;
+			/* display:inline-block; */
+		}
+		
+		ul li a {
+			display:block;
+			text-decoration:none;
+			color:white;
+			padding:8px 15px;
+			/* float:left; */
+			/* width:100px;
+			height:20px; */
+		}
+		
+		ul li:last-child {
+			/* border:2px solid green; */
+			float:right;
+		}
+		
+		ul li:first-child a {
+			background:mediumseagreen;
+		}
+		
+		ul > li > a:hover:not(.active) {
+			background:#000;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>horizontal</h1>
+	<ul>
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+	
+</body>
+</html>

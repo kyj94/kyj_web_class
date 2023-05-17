@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Border</title>
+	<style>
+		p {
+			background:yellow;
+			padding:20px;			
+			/* height:70px; */
+			}
+			
+		.p1 {
+			/* border-style:dotted;
+			border-width:5px;
+			border-color:red; */
+			border: 5px dotted red;
+			}
+			
+		.p2 {
+			/* border-style:solid;
+			border-width:5px;
+			border-color:green; */
+			border: 5px solid green;
+			border-radius:5px;
+			}	
+			
+		.p3 {
+			/* border-style:groove;
+			border-width:10px;
+			border-color:blue; */
+			border:10px groove blue;
+			border-radius:10px;
+			}
+			
+		.p4 {
+			/* border-top-style:dotted;
+			border-right-style:solid;
+			border-bottom-style:dotted;
+			border-left-style:solid; */
+			
+			/* border-top-color:tomato;
+			border-top-width:10px; */
+			
+			border-style:dotted solid groove solid;
+			border-color:tomato green blue red;
+			border-width:5px 10px 7px 20px;
+			}	
+			
+		.p5 {
+			/* bottom, 10px, 직선 solid, bule*/
+			/* border-bottom-width:10px;
+			border-bottom-style:solid;
+			border-bottom-color:blue; */
+			border-bottom:10px solid green;
+			}	
+	</style>
+</head>
+
+<body>
+	<h1>Border</h1>
+	<p class="p1">Border style 1</p>
+	<p class="p2">Border style 2</p>
+	<p class="p3">Border style 3</p>
+	<p class="p4">Border style 4</p>
+	<p class="p5">Border style 5</p>
+</body>
+</html>

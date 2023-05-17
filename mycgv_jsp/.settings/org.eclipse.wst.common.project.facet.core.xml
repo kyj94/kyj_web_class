@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
+<<<<<<< HEAD
   <fixed facet="jst.web"/>
   <fixed facet="jst.java"/>
   <installed facet="jst.web" version="2.5"/>
   <installed facet="jst.java" version="1.6"/>
+=======
+  <fixed facet="java"/>
+  <fixed facet="jst.web"/>
+  <fixed facet="wst.jsdt.web"/>
+  <installed facet="java" version="11"/>
+  <installed facet="jst.web" version="3.0"/>
+  <installed facet="wst.jsdt.web" version="1.0"/>
+>>>>>>> branch 'master' of https://github.com/kyj94/kyj_web_class.git
 </faceted-project>
