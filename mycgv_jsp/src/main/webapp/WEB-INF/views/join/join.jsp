@@ -14,13 +14,13 @@
 	<!-- header -->
 	<!-- <iframe src="http://localhost:9000/mycgv_jsp/header.jsp"
 			scrolling="no" width="100%" height="149px" frameborder=0></iframe> -->
-	<jsp:include page="../header.jsp"></jsp:include>
+	<jsp:include page="/header.do"></jsp:include>
 	
 	<!-- content -->
 	<div class="content">
 		<section class="join">
 			<h1 class="title">회원가입</h1>
-			<form name="joinForm" action="joinProc.jsp" method="post">
+			<form name="joinForm" action="join_proc.do" method="post">
 				<ul>
 					<li>
 						<label>아이디</label>
@@ -107,22 +107,8 @@
 	<!-- footer -->
 	<!-- <iframe src="http://localhost:9000/mycgv_jsp/footer.jsp"
 			scrolling="no" width="100%" height="500px" frameborder=0></iframe> -->	
-	<jsp:include page="../footer.jsp"></jsp:include>
+	<jsp:include page="/footer.do"></jsp:include>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

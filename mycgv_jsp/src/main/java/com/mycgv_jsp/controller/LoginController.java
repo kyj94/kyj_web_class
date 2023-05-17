@@ -32,11 +32,19 @@ public class LoginController {
 			
 		} else {
 			// login_fail.jsp
-			viewName = "/login/login_fail";
+			viewName = "redirect:/login_fail.do";
 		}
 		
 		return viewName;
 	}
+	
+	
+	/** login_fail.do - 로그인 실패 **/
+	@RequestMapping(value="login_fail.do", method=RequestMethod.GET)
+	public String login_fail() {
+		return "/login/login_fail";
+	}
+	
 	
 
 } // class
